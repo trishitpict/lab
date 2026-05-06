@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W19 - Student Marks Manager</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #000; padding: 8px; text-align: left; }
+        th { background: #eee; }
+        .btn-group { margin-bottom: 20px; }
+        button { margin-right: 10px; padding: 8px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Student Marks Management</h1>
+    
+    <div class="btn-group">
+        <button onclick="fetchAll()">List All & Count (d, j)</button>
+        <button onclick="fetchQuery('/api/students/dsbdahigh', 'DSBDA > 20')">DSBDA > 20 (e)</button>
+        <button onclick="fetchQuery('/api/students/allpass', 'All > 25')">All > 25 (g)</button>
+        <button onclick="fetchQuery('/api/students/lowmathscience', 'Maths & Science < 40')">Maths & Science < 40 (h)</button>
+    </div>
+
+    <p id="infoDisplay"></p>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th><th>Roll No</th><th>WAD</th><th>DSBDA</th><th>CNS</th><th>CC</th><th>AI</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        async function fetchAll() {
+            const res = await fetch('/api/students');
+            const data = await res.json();
+            document.getElementById('infoDisplay').innerText = "Total Documents: " + data.count;
+            renderTable(data.students);
+        }
+
+        async function fetchQuery(url, label) {
+            const res = await fetch(url);
+            const names = await res.json();
+            document.getElementById('infoDisplay').innerText = "Query: " + label;
+            
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = names.map(n => `<tr><td colspan="7">${n.Name}</td></tr>`).join('');
+        }
+
+        function renderTable(students) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = students.map(s => `
+                <tr>
+                    <td>${s.Name}</td><td>${s.Roll_No}</td>
+                    <td>${s.WAD_Marks}</td><td>${s.DSBDA_Marks}</td>
+                    <td>${s.CNS_Marks}</td><td>${s.CC_Marks}</td>
+                    <td>${s.AI_marks}</td>
+                </tr>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
