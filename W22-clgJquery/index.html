@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PICT Mobile Portal</title>
+
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
+    <script src="jquery/jquery-1.11.1.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .college-logo { width: 80px; display: block; margin: 10px auto; }
+        .ui-content { padding: 15px; }
+        .contact-info { background: #f9f9f9; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: ABOUT US -->
+    <div data-role="page" id="about" data-transition="fade">
+        <div data-role="header" data-theme="b">
+            <h1>PICT Pune</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" class="ui-btn-active ui-state-persist" data-icon="info">About</a></li>
+                    <li><a href="#courses" data-icon="grid">Courses</a></li>
+                    <li><a href="#departments" data-icon="bars">Depts</a></li>
+                    <li><a href="#contact" data-icon="location">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <img src="https://via.placeholder.com/80" class="college-logo" alt="PICT Logo">
+            <h2>Pune Institute of Computer Technology</h2>
+            <p>Established in 1983, PICT is a pioneer in Computer Engineering and Information Technology education in India.</p>
+            <p>Affiliated with Savitribai Phule Pune University, it is consistently ranked among the top technical institutes in the country.</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Education for Excellence</h4>
+        </div>
+    </div>
+
+    <!-- PAGE 2: COURSES OFFERED -->
+    <div data-role="page" id="courses" data-transition="slide">
+        <div data-role="header" data-theme="b">
+            <h1>Courses</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#courses" class="ui-btn-active ui-state-persist" data-icon="grid">Courses</a></li>
+                    <li><a href="#departments" data-icon="bars">Depts</a></li>
+                    <li><a href="#contact" data-icon="location">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Undergraduate (B.E.)</li>
+                <li>Computer Engineering</li>
+                <li>Information Technology</li>
+                <li>Electronics & Telecommunication</li>
+                <li data-role="list-divider">Postgraduate (M.E.)</li>
+                <li>Computer Engineering</li>
+                <li>Data Science</li>
+                <li>Information Technology</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PAGE 3: DEPARTMENTS (Collapsible Content) -->
+    <div data-role="page" id="departments" data-transition="flip">
+        <div data-role="header" data-theme="b">
+            <h1>Departments</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#courses" data-icon="grid">Courses</a></li>
+                    <li><a href="#departments" class="ui-btn-active ui-state-persist" data-icon="bars">Depts</a></li>
+                    <li><a href="#contact" data-icon="location">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h3>Academic Divisions</h3>
+            <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+                <div data-role="collapsible">
+                    <h3>Computer Engineering</h3>
+                    <p>Known for strong research and industry placement. The department is equipped with state-of-the-art labs.</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Information Technology</h3>
+                    <p>Focuses on advanced software development, networking, and security systems. Home to several creative clubs.</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Electronics & Telecommunication</h3>
+                    <p>Specializes in signal processing, communication systems, and embedded hardware design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CONTACT INFORMATION -->
+    <div data-role="page" id="contact" data-transition="pop">
+        <div data-role="header" data-theme="b">
+            <h1>Contact Us</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#courses" data-icon="grid">Courses</a></li>
+                    <li><a href="#departments" data-icon="bars">Depts</a></li>
+                    <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="location">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="contact-info">
+                <h3>Campus Address</h3>
+                <p>Survey No. 27, Near Trimurti Chowk,</p>
+                <p>Dhankawadi, Pune - 411043,</p>
+                <p>Maharashtra, India.</p>
+                <hr>
+                <p><strong>Email:</strong> contact@pict.edu</p>
+                <p><strong>Phone:</strong> +91 22 44441111</p>
+            </div>
+            <br>
+            <a href="tel:+912244441111" class="ui-btn ui-icon-phone ui-btn-icon-left ui-corner-all">Call Reception</a>
+        </div>
+    </div>
+
+</body>
+</html>
