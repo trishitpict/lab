@@ -1,0 +1,136 @@
+/* --- 1. BASIC RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #f0f4f8; /* Light Sky Blue */
+    color: #1a365d;            /* Deep Navy */
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER & NAVBAR --- */
+header {
+    background-color: #1a365d; /* Navy Blue */
+    color: #f0f4f8;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-links li a:hover { color: #63b3ed; }
+
+/* --- 3. INTRO SECTION --- */
+#introHeading {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #2c5282;
+}
+
+.container { padding: 60px 10%; }
+
+.intro-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #3182ce;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+/* --- 4. HIGHLIGHTS GRID --- */
+.bg-light { background-color: #ebf8ff; }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.col {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-left: 5px solid #3182ce;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+/* --- 5. COURSE TABLE --- */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Essential for mobile responsiveness */
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    min-width: 600px; /* Prevents text squishing */
+}
+
+.menu-table th, .menu-table td {
+    padding: 15px;
+    border: 1px solid #bee3f8;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #3182ce;
+    color: white;
+}
+
+/* --- 6. FOOTER & MEDIA QUERIES --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1a365d;
+    color: #ebf8ff;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .row { flex-direction: column; }
+    .container { padding: 30px 5%; }
+    #introHeading { font-size: 2rem; }
+}

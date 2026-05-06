@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="data-container">
+        <h2>Registered Users Data</h2>
+        <div class="table-responsive">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>DOB</th>
+                        <th>City</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- JavaScript will inject rows here -->
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button class="btn-back" onclick="window.location.href='index.html'">Back to Portal</button>
+    </div>
+
+    <script>
+        // Runs automatically when the page loads
+        window.onload = function() {
+            // Retrieve data from localStorage or default to empty array
+            const storedData = localStorage.getItem('users');
+            const users = storedData ? JSON.parse(storedData) : [];
+            const tbody = document.getElementById('tableBody');
+            
+            if (users.length === 0) {
+                tbody.innerHTML = "<tr><td colspan='6' style='text-align:center'>No users registered yet.</td></tr>";
+                return;
+            }
+
+            users.forEach(user => {
+                const row = `<tr>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.mobile}</td>
+                    <td>${user.dob}</td> <!-- Correctly shows dd-mm-yyyy -->
+                    <td>${user.city}</td>
+                    <td>${user.address}</td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        };
+    </script>
+</body>
+</html>

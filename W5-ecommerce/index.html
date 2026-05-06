@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mug World</title>
+    <!-- Offline Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#">MUG-WORLD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (container-fluid for smaller margins) -->
+    <div class="container-fluid px-4 mt-4 flex-grow-1">
+        <div class="row">
+            
+            <!-- Left Pane: Sidebar Filters -->
+            <aside class="col-lg-2 d-none d-lg-block border-end">
+                <h6 class="text-uppercase fw-bold mb-3">Target Market</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="m1"> <label class="form-check-label" for="m1">USA</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="m2"> <label class="form-check-label" for="m2">Canada</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="m3"> <label class="form-check-label" for="m3">United Kingdom</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="m4"> <label class="form-check-label" for="m4">Europe</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="m5"> <label class="form-check-label" for="m5">Australia / NZ</label></div>
+
+                <h6 class="text-uppercase fw-bold mt-4 mb-3">Print Area</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="p1"> <label class="form-check-label" for="p1">All Areas</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="p2"> <label class="form-check-label" for="p2">All Over Print</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="p3"> <label class="form-check-label" for="p3">Front Side</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="p4"> <label class="form-check-label" for="p4">Wraparound</label></div>
+                
+                <h6 class="text-uppercase fw-bold mt-4 mb-3">Providers</h6>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="pv1"> <label class="form-check-label" for="pv1">ArtsAdd</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="pv2"> <label class="form-check-label" for="pv2">Colorway</label></div>
+            </aside>
+
+            <!-- Product Display Area -->
+            <main class="col-lg-10">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>Mugs (12 Items)</h3>
+                    <!-- Dropdown Fix: data-bs-toggle is essential -->
+                    <div class="dropdown">
+                        <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Sort by: Popularity
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                            <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                            <li><a class="dropdown-item" href="#">Newest First</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Grid: 12 Dummy Products -->
+                <div class="row g-4 mb-5 pb-5">
+                    <!-- Example Card (Repeat this 12 times in exam) -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 product-card">
+                            <img src="mug.jpg" class="card-img-top p-3">
+                            <div class="card-body">
+                                <h6 class="card-title fs-6">Ceramic Mug 11oz</h6>
+                                <p class="text-muted small">By Gooten Brand</p>
+                                <p class="fw-bold">From USD 4.40</p>
+                                <button class="btn btn-outline-primary btn-sm w-100">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dummy Items 2 to 12 follow the same structure -->
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Accent Mug</h6><p class="text-muted small">By Printify</p><p class="fw-bold">USD 5.50</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>White Mug</h6><p class="text-muted small">By Custom</p><p class="fw-bold">USD 3.99</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Travel Mug</h6><p class="text-muted small">By Yeti</p><p class="fw-bold">USD 12.00</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Enamel Mug</h6><p class="text-muted small">By Camp</p><p class="fw-bold">USD 7.40</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Magic Mug</h6><p class="text-muted small">By Heat</p><p class="fw-bold">USD 9.20</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Large Mug 15oz</h6><p class="text-muted small">By Gooten</p><p class="fw-bold">USD 6.10</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Matte Black</h6><p class="text-muted small">By Dark</p><p class="fw-bold">USD 8.50</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Glass Mug</h6><p class="text-muted small">By Clear</p><p class="fw-bold">USD 10.00</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Latte Mug</h6><p class="text-muted small">By Coffee</p><p class="fw-bold">USD 7.99</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Eco Mug</h6><p class="text-muted small">By Bamboo</p><p class="fw-bold">USD 11.50</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                    <div class="col-6 col-md-4 col-lg-3"> <div class="card h-100 product-card"><img src="mug.jpg" class="card-img-top p-3"><div class="card-body"><h6>Dotted Mug</h6><p class="text-muted small">By Art</p><p class="fw-bold">USD 5.80</p><button class="btn btn-outline-primary btn-sm w-100">Add</button></div></div> </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="bg-dark text-white text-center py-2 fixed-bottom">
+        <small>&copy; 2026 MugWorld Store | Admin Panel | Contact Us</small>
+    </footer>
+
+    <!-- Scripts (Load Bundle at the end) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

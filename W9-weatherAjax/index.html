@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-card">
+        <h1>Weather Forecast</h1>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., Pune, Mumbai)">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <div id="result" class="result-area" style="display: none;">
+            <h2 id="resCity">City Name</h2>
+            <div class="info">
+                <p><strong>Condition:</strong> <span id="resCond">--</span></p>
+                <p><strong>Temperature:</strong> <span id="resTemp">--</span>°C</p>
+                <p><strong>Humidity:</strong> <span id="resHum">--</span>%</p>
+            </div>
+        </div>
+
+        <p id="errorMsg" class="error" style="display: none;">City not found in local repository!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+[
+    { "id": 1, "name": "Trishit Guin", "email": "trishit@demo.com", "city": "Pune" },
+    { "id": 2, "name": "Aarav Sharma", "email": "aarav@demo.com", "city": "Mumbai" },
+    { "id": 3, "name": "Sneha Patil", "email": "sneha@demo.com", "city": "Nagpur" },
+    { "id": 1, "name": "Sanket Verma", "email": "sanket@demo.com", "city": "Kolkata" },
+    { "id": 2, "name": "Arjav Mehta", "email": "arjav@demo.com", "city": "Delhi" },
+    { "id": 1, "name": "Shivam Choudhary", "email": "shivam@demo.com", "city": "Kanpur" },
+    { "id": 2, "name": "Akshay Khanna", "email": "akshay@demo.com", "city": "Lucknow" }
+]

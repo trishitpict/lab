@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Portfolio</title>
+    <!-- jQuery Mobile CSS & JS CDN -->
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
+    <script src="jquery/jquery-1.11.1.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .profile-img { width: 100px; border-radius: 50%; display: block; margin: 10px auto; }
+        .ui-content { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: ABOUT ME -->
+    <div data-role="page" id="about">
+        <div data-role="header" data-theme="b" data-add-back-btn="false">
+            <h1>Portfolio</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" class="ui-btn-active ui-state-persist" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-icon="grid">Projects</a></li>
+                    <li><a href="#skills" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <img src="https://via.placeholder.com/100" class="profile-img" alt="Profile">
+            <h2>Trishit Guin</h2>
+            <p>Information Technology Student at PICT.</p>
+            <p>Passionate Full-Stack Developer with a focus on creating sustainable and AI-driven technical solutions.</p>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>&copy; 2026 Portfolio</h4>
+        </div>
+    </div>
+
+    <!-- PAGE 2: PROJECTS -->
+    <div data-role="page" id="projects">
+        <div data-role="header" data-theme="b">
+            <h1>My Projects</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="user">About</a></li>
+                    <li><a href="#projects" class="ui-btn-active ui-state-persist" data-icon="grid">Projects</a></li>
+                    <li><a href="#skills" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Web Development</li>
+                <li>
+                    <a href="#">
+                        <h2>Stock2Door</h2>
+                        <p>Sustainable inventory and logistics platform.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>AI Career Assistant</h2>
+                        <p>Gemini API driven resume and interview prep tool.</p>
+                    </a>
+                </li>
+                <li data-role="list-divider">Blockchain</li>
+                <li>
+                    <a href="#">
+                        <h2>AyurChain</h2>
+                        <p>Supply chain tracking for Ayurvedic products.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>W25 Lab Submission</h4>
+        </div>
+    </div>
+
+    <!-- PAGE 3: SKILLS -->
+    <div data-role="page" id="skills">
+        <div data-role="header" data-theme="b">
+            <h1>Expertise</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-icon="grid">Projects</a></li>
+                    <li><a href="#skills" class="ui-btn-active ui-state-persist" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h3>Technical Skills</h3>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search skills...">
+                <li>MERN Stack</li>
+                <li>Next.js & TypeScript</li>
+                <li>Generative AI (Gemini API)</li>
+                <li>Cloud (AWS/Supabase)</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>PICT IT 2026</h4>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CONTACT -->
+    <div data-role="page" id="contact">
+        <div data-role="header" data-theme="b">
+            <h1>Get In Touch</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-icon="grid">Projects</a></li>
+                    <li><a href="#skills" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Contact Details</h3>
+                <p><strong>Email:</strong> user@pict.edu</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/username</p>
+                <p><strong>GitHub:</strong> github.com/username</p>
+            </div>
+            <br>
+            <a href="mailto:user@pict.edu" class="ui-btn ui-btn-b ui-corner-all ui-icon-mail ui-btn-icon-left">Send Email</a>
+            <a href="tel:+910000000000" class="ui-btn ui-corner-all ui-icon-phone ui-btn-icon-left">Call Me</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Pune, Maharashtra</h4>
+        </div>
+    </div>
+
+</body>
+</html>

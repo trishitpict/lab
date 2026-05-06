@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <!-- Offline Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <nav class="navbar navbar-dark fb-header py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold fs-2" href="#">facebook</a>
+            
+            <!-- Login Form Area -->
+            <div class="login-container">
+                <form class="row g-2 align-items-start">
+                    <!-- Email Column -->
+                    <div class="col-auto">
+                        <label class="text-white login-label">Email or Username</label>
+                        <input type="text" class="form-control form-control-sm login-input">
+                        <div class="form-check mt-1 p-0 d-flex align-items-center">
+                            <input type="checkbox" id="keepLogged" class="form-check-input me-1 m-0">
+                            <label class="text-white sub-label" for="keepLogged">Keep me logged in</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Column -->
+                    <div class="col-auto">
+                        <label class="text-white login-label">Password</label>
+                        <input type="password" class="form-control form-control-sm login-input">
+                        <div class="mt-1">
+                            <a href="#" class="text-white-50 sub-label">Forgotten my password?</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Login Button Column -->
+                    <div class="col-auto align-self-center mt-3">
+                        <label class="d-block login-label">&nbsp;</label>
+                        <button class="btn btn-primary btn-sm login-btn fw-bold" type="submit">Log In</button>
+                        <div class="mt-1">
+                            <p class="text-white-50 sub-label">&nbsp</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Left Info -->
+            <div class="col-md-6 pt-5">
+                <h2 class="fw-bold">Facebook helps you connect and share with the people in your life.</h2>
+                <div class="map-placeholder mt-5">
+                    <!-- Use a simple div with background color if image isn't available -->
+                    <div class="text-center p-5 text-muted bg-white border rounded">
+                        <img src="https://via.placeholder.com/200">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Signup -->
+            <div class="col-md-6 ps-md-5">
+                <h1 class="fw-bold mb-0">Create an Account</h1>
+                <p class="fs-5 text-secondary">It's free and always will be.</p>
+                
+                <form id="signupForm">
+                    <div class="row g-2 mb-2">
+                        <div class="col"><input type="text" class="form-control" placeholder="Firstname"></div>
+                        <div class="col"><input type="text" class="form-control" placeholder="Lastname"></div>
+                    </div>
+                    <input type="email" class="form-control mb-2" placeholder="Email">
+                    <input type="email" class="form-control mb-2" placeholder="Re-enter email">
+                    <input type="password" class="form-control mb-2" placeholder="New Password">
+                    
+                    <label class="form-label fw-bold mt-2 mb-1">Birthday</label>
+                    <input type="date" class="form-control mb-3">
+                    
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="g" id="m">
+                            <label class="form-check-label" for="m">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="g" id="f">
+                            <label class="form-check-label" for="f">Female</label>
+                        </div>
+                    </div>
+                    
+                    <p class="small text-muted">By clicking Signup, you agree to our Terms and Data Policy.</p>
+                    <button type="submit" class="btn btn-success fw-bold px-5 btn-lg shadow-sm">Signup</button>
+                </form>
+                <hr>
+                <p><a href="#" class="text-decoration-none">Create a Page</a> for you.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

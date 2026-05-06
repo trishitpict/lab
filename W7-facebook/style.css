@@ -1,0 +1,73 @@
+/* General Colors */
+body {
+    background-color: #f0f2f5;
+}
+
+/* 1. Header (Thinner Design) */
+.fb-header {
+    background-color: #3b5998; /* Classic FB Blue */
+    border-bottom: 1px solid #29487d;
+}
+
+.login-label {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.sub-label {
+    font-size: 10px;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.sub-label:hover {
+    color: white !important;
+}
+
+/* Thinner Inputs & Button */
+.login-input {
+    width: 140px !important;
+    height: 22px !important;
+    font-size: 12px !important;
+    padding: 2px 5px !important;
+    border-radius: 1px !important;
+}
+
+.login-btn {
+    height: 22px !important;
+    font-size: 11px;
+    padding: 0 10px;
+    background-color: #4267b2;
+    border: 1px solid #29487d;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Check Alignment Fix */
+.form-check-input {
+    width: 12px;
+    height: 12px;
+}
+
+/* 2. Signup Form Styling */
+.form-control {
+    background-color: #f5f6f7;
+    border: 1px solid #dddfe2;
+}
+
+.btn-success {
+    background-color: #42b72a; /* FB Green */
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-success:hover {
+    background-color: #36a420;
+}
+
+/* Map Area */
+.map-placeholder {
+    max-width: 500px;
+}

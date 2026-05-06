@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>W18 - Music Management</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f4f7f6;
+        }
+
+        .dashboard {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            background: #3498db;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <h1>Music Database Manager</h1>
+
+        <div class="controls">
+            <button onclick="updateActors()">Update All (Add Actor/Actress)</button>
+            <button onclick="loadAll()">Display All & Count</button>
+            <button onclick="addFavourite()">Add Favourite Song</button>
+            <button onclick="filterDirector('GHI')">List Songs (Director: GHI)</button>
+        </div>
+
+        <p id="countDisplay">Total Documents: 0</p>
+
+        <table id="songTable">
+            <thead>
+                <tr>
+                    <th>Song Name</th>
+                    <th>Film Name</th>
+                    <th>Music Director</th>
+                    <th>Singer</th>
+                    <th>Actor</th>
+                    <th>Actress</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        async function loadAll() {
+            const res = await fetch('/api/songs');
+            const data = await res.json();
+            document.getElementById('countDisplay').innerText = "Total Documents: " + data.totalCount;
+            renderTable(data.songs);
+        }
+
+        async function updateActors() {
+            await fetch('/api/songs/update-actors', { method: 'PUT' });
+            alert("Updated all documents with Actor/Actress names.");
+            loadAll();
+        }
+
+        async function addFavourite() {
+            const song = { Songname: "MyFav", Film: "HitFilm", Music_director: "BestMD", singer: "TopSinger" };
+            await fetch('/api/songs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(song)
+            });
+            loadAll();
+        }
+
+        async function filterDirector(name) {
+            const res = await fetch(`/api/songs/director/${name}`);
+            const songs = await res.json();
+            renderTable(songs);
+        }
+
+        async function deleteSong(id) {
+            await fetch(`/api/songs/${id}`, { method: 'DELETE' });
+            loadAll();
+        }
+
+        function renderTable(songs) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = "";
+            songs.forEach(s => {
+                tbody.innerHTML += `<tr>
+                    <td>${s.Songname}</td><td>${s.Film}</td><td>${s.Music_director}</td>
+                    <td>${s.singer}</td><td>${s.Actor || '-'}</td><td>${s.Actress || '-'}</td>
+                    <td><button onclick="deleteSong('${s._id}')" style="background:red">Delete</button></td>
+                </tr>`;
+            });
+        }
+
+        window.onload = loadAll;
+    </script>
+</body>
+
+</html>

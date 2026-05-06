@@ -1,0 +1,28 @@
+/* Custom styling to improve the 'out-of-the-box' Bootstrap look */
+
+.registration-card {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Background decoration */
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+/* Subtle hover effect for the button */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Fix for floating labels alignment with icons if used */
+.form-floating > label {
+    padding-left: 1rem;
+}

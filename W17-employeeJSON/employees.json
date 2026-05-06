@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Trishit Guin",
+        "designation": "Software Engineer",
+        "department": "IT",
+        "salary": "₹85,000",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 2,
+        "name": "Aarav Sharma",
+        "designation": "Project Manager",
+        "department": "Operations",
+        "salary": "₹95,000",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 3,
+        "name": "Sneha Patil",
+        "designation": "UI/UX Designer",
+        "department": "Design",
+        "salary": "₹70,000",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 4,
+        "name": "Ishaan Verma",
+        "designation": "DevOps Engineer",
+        "department": "IT",
+        "salary": "₹90,000",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 5,
+        "name": "Harsh Verma",
+        "designation": "AI Engineer",
+        "department": "IT",
+        "salary": "₹94,000",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 6,
+        "name": "Sejal Gupta",
+        "designation": "CloudOps Engineer",
+        "department": "IT",
+        "salary": "₹80,000",
+        "image": "https://via.placeholder.com/300"
+    }
+]

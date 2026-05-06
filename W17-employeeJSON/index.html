@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W17 - Employee Directory</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Grid Layout */
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .employee-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #eee;
+            display: block;
+        }
+
+        .employee-name {
+            font-size: 1.2rem;
+            margin: 15px 0 5px;
+            color: #2c3e50;
+        }
+
+        .employee-details {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .employee-salary {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Employee Directory</h1>
+        <div id="directory" class="employee-grid">
+            <!-- Data will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        async function loadEmployees() {
+            try {
+                // Fetching data from the native Node.js API
+                const response = await fetch('/api/employees');
+                const employees = await response.json();
+
+                const container = document.getElementById('directory');
+                container.innerHTML = ""; 
+
+                employees.forEach(emp => {
+                    const card = `
+                        <div class="employee-card">
+                            <img src="${emp.image}" alt="${emp.name}" class="profile-image">
+                            <h3 class="employee-name">${emp.name}</h3>
+                            <p class="employee-details"><strong>${emp.designation}</strong></p>
+                            <p class="employee-details">${emp.department} Department</p>
+                            <p class="employee-salary">${emp.salary}</p>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            } catch (err) {
+                console.error("Error fetching employee directory:", err);
+            }
+        }
+
+        window.onload = loadEmployees;
+    </script>
+</body>
+
+</html>

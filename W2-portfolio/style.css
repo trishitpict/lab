@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. NAVIGATION BAR - Sticky layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #1a1a2e; /* Dark Blue */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links li a:hover {
+    color: #4db8ff; /* Light blue on hover */
+}
+
+/* 3. HERO SECTION - High visual impact */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to top, #1a1a2e, #16213e);
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #4db8ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 4. GENERAL SECTION STYLING */
+.container {
+    padding: 60px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #1a1a2e;
+}
+
+.gray-bg {
+    background-color: #eef2f3;
+}
+
+/* 5. SKILLS - Badge style */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+/* 6. PROJECT GRID - Responsive cards */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 300px; /* Responsive: flex-grow, shrink, basis */
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #4db8ff;
+}
+
+/* 7. EDUCATION TABLE */
+.edu-table {
+    width: 100%;
+    border-collapse: collapse; /* Merges borders */
+    background: white;
+}
+
+.edu-table th, .edu-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.edu-table th {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+/* 8. CONTACT FORM */
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Success Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* 9. FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a2e;
+    color: white;
+}
